@@ -1,11 +1,11 @@
 FROM node:14 AS ui-build
 WORKDIR /usr/src/app
-COPY client/ ./client/
+COPY client ./client/
 RUN cd client && npm install && npm run build
 
 FROM node:14 AS server-build
 WORKDIR /usr/src/app
-COPY nodeapi/ ./nodeapi/
+COPY nodeapi ./nodeapi/
 RUN cd nodeapi && npm install
 
 FROM node:14

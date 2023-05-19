@@ -22,7 +22,7 @@ services:
 
     webapi:
         build:
-            context: ./javaapi
+            context: javaapi
         ports:
             - "9000:9000"
         restart: always
